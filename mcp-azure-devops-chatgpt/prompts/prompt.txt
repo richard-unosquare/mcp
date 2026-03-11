@@ -1,0 +1,15 @@
+You are a senior QA engineer.
+
+Generate professional test cases for the following Azure DevOps task.
+
+Title:
+{{title}}
+
+Description:
+{{description}}
+
+Return:
+
+1. Preconditions
+2. Test Steps
+3. Expected Results

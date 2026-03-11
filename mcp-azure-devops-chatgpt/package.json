@@ -1,0 +1,15 @@
+{
+  "name": "azure-devops-ai-assistant",
+  "version": "1.0.0",
+  "description": "AI assistant for Azure DevOps: generate test cases and analyze work items",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "azure-devops-node-api": "14.0.0",
+    "dotenv": "16.4.5",
+    "openai": "4.0.0"
+  }
+}
