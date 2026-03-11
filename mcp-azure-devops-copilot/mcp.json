@@ -1,0 +1,34 @@
+{
+	"servers": {
+		"azureDevOps": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"@tiberriver256/mcp-server-azure-devops"
+			],
+			"env": {
+				"AZURE_DEVOPS_ORG_URL": "https://dev.azure.com/QELab",
+				"AZURE_DEVOPS_AUTH_METHOD": "pat",
+				"AZURE_DEVOPS_PAT": "PUT_YOUR_PAT_HERE",
+				"AZURE_DEVOPS_DEFAULT_PROJECT": "QELab"
+			},
+			"type": "stdio"
+		},
+		"ado": {
+			"type": "stdio",
+			"command": "npx",
+			"args": [
+				"-y",
+				"@azure-devops/mcp",
+				"${input:ado_org}"
+			]
+		}
+	},
+	"inputs": [
+		{
+			"id": "ado_org",
+			"type": "promptString",
+			"description": "Azure DevOps organization name  (e.g. 'contoso')"
+		}
+	]
+}
